@@ -45,6 +45,105 @@ insert into aluno values (3001, 'Godofredo Henrique', '2000-03-15', '123.456.789
 
 insert into aluno values (null, 'Josefina Winter', '1945-02-10', '123.456.789-02', 'Clenisbaldo Winter', null);
 
+insert aluno values (null, 'Ana Carolina', '2007-10-22', '123-456-789-03', 'Maurício Oliveria', null);
+
+insert into aluno (matricula, nome, nascimento, cpf, responsavel, email) values (null, 'Elias Sherman', '1996-03-02', '123.456.789-04', 'John Sherman', 'es@email.com');
+
+insert into aluno (nome, cpf, responsavel) values ('Waldiney Mouse', '123.456.789-05', 'Wesley Keyboard');
+
+insert into aluno (cpf, nome, responsavel, email) values ('123.456.789-06', 'Genivaldo Williams', 'Clotilde Williams', 'gw@email.cpm');
+
+insert aluno values (null, 'Judite Presley', null, '123.456.789-07', 'William Presley', null);
 
 
 
+
+insert turma values (2023080, 'M', 'Técnico de Informática');
+
+insert turma values (2023090, 'T', 'Técnico de Comunicação Visual');
+
+insert turma values (20223100, 'M', 'Técnico de Comunicação Visual');
+
+
+
+insert into estuda values (7501, 3001, 2023090);
+
+insert into estuda values (null, 3005, 2023080);
+
+insert into estuda values (null, 3003, 2023080);
+
+insert into estuda values (null, 3007, 2023080);
+
+insert into estuda values (null, 3004, 2023090);
+
+insert into estuda values (null, 3006, 2023090);
+
+insert into estuda values (null, 3006, 2023080);
+
+insert estuda values (3008, 20223100);
+
+
+
+
+insert into disciplina values (2000, 'Programação');
+
+insert into disciplina values (null, 'Redes');
+
+insert into disciplina values (null, 'Tratamento de Imagem');
+
+insert into disciplina values (null, 'Lógica de programação');
+
+
+
+insert into possui values (201, 2000, 2023080);
+
+insert into possui values (null, 2001, 2023080);
+
+insert into possui values (null, 2002, 2023090);
+
+insert into possui values (null, 2004, 2023080);
+
+insert possui values (null, 2002, 20223100);
+
+
+
+
+
+insert into professor values (505, 'Sérgio', 'T.I');
+
+insert into professor values (null, 'Vicente', 'T.I');
+
+insert into professor values (null, 'Flávia', 'Design');
+
+insert into professor values (null, 'Jefferson Brandão', 'T.I');
+
+
+
+insert into leciona values (9001, 2000, 505);
+
+insert into leciona values (null, 2001, 506);
+
+insert into leciona values (null, 2002, 507);
+
+insert into leciona values (null, 2003, 508);
+
+
+
+
+update professor set nome = 'Vicente Orsino' where matricula = 508;
+
+update aluno set nascimento = '2006-09-26' where matricula = 3006;
+
+update aluno set nascimento = '2006-09-26' where matricula = 3007;
+
+update professor set nome = 'Vicente Orsino' where matricula = 506;
+
+update professor set email = 'sergio@gmail.com' where matricula = 505;
+
+update professor set email = 'vicento@email.com' where matricula = 506;
+
+update professor set email = 'flavs@email.com' where matricula = 507;
+
+update professor set email = 'jeffbr@email.com' where matricula = 508;
+
+update disciplina set nome = 'Programação Python' where cod_disciplina = 2000;

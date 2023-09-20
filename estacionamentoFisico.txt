@@ -15,6 +15,48 @@ alter table carro change idVeiculo idCarro int;
 
 
 
+insert into carro values (1501, 'VW', 'Gol', 'ABC1234');
+
+insert into carro values (1502, 'FIAT', 'Marea Turbo', 'ABC1235');
+
+insert into carro values (1503, 'FORD', 'Ka', 'ABC1236');
+
+insert into carro values (1504, 'TOYOTA', 'Corolla', 'ABC1237');
+
+insert into carro values (1505, 'HONDA', 'Civic', 'ABC1238');
+
+
+
+
+update carro set fabricante = 'VOLKSWAGEN' where idCarro = 1501;
+
+
+
+delete from carro where idCarro = 1502;
+
+
+
+update carro set modelo = 'Polo', placa ='ABC240' where idCarro = 1501;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
