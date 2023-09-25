@@ -55,6 +55,11 @@ insert into aluno (cpf, nome, responsavel, email) values ('123.456.789-06', 'Gen
 
 insert aluno values (null, 'Judite Presley', null, '123.456.789-07', 'William Presley', null);
 
+insert into aluno values (null, 'Renata Mouse', '1995-03-15', '123.456.789-08', 'Wesley Keyboard', null;
+
+insert into aluno values (null, 'Mouse Sherman Williams', '2015-09-12', '123.456.789-09', 'Cpu Sherman', null);
+
+
 
 
 
@@ -136,6 +141,8 @@ update aluno set nascimento = '2006-09-26' where matricula = 3006;
 
 update aluno set nascimento = '2006-09-26' where matricula = 3007;
 
+update aluno set nome = 'Renata Mouse Silva' where matricula = 3009;
+
 update professor set nome = 'Vicente Orsino' where matricula = 506;
 
 update professor set email = 'sergio@gmail.com' where matricula = 505;
@@ -147,3 +154,19 @@ update professor set email = 'flavs@email.com' where matricula = 507;
 update professor set email = 'jeffbr@email.com' where matricula = 508;
 
 update disciplina set nome = 'Programação Python' where cod_disciplina = 2000;
+
+
+
+
+
+
+
+
+
+
+
+select aluno.nome, turma.definicao, turma.turno from aluno, turma, estuda where aluno.matricula = estuda.fk_aluno_matricula and fk_turma_numero = turma.numero order by aluno.nome;
+
+
+
+select aluno.nome, turma.definicao, disciplina.nome from aluno, estuda, turma, possui, disciplina where aluno.matricula = estuda.fk_aluno_matricula and estuda.fk_turma_numero = turma.numero and turma.numero = possui.fk_turma_numero and possui.fk_Disciplina_cod_disciplina = disciplina.cod_disciplina;
